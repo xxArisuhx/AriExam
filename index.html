@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gestion Publica</title>
+    <style>
+
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 20px;
+      }
+      table {
+        border-collapse: collapse;
+        margin-top: 20px;
+      }
+      th,
+      td {
+        border: 1px solid #ccc;
+        padding: 10px;
+        text-align: left;
+      }
+      th {
+        background-color: #f4f4f4;
+      }
+
+      .btn-delete {
+        background-color: #dc3645;
+        border: none;
+        color: #fff;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Gestion de Publicidad</h1>
+    <form id="form">
+      <input type="text" id="name" placeholder="Nombre" required />
+      <input id="description" placeholder="Descripcion" required>
+
+      <label for="startDate">Fecha de inicio:</label>
+      <input type="date" id="startDate" required />
+
+      <label for="expDate">Fecha de Expiración:</label>
+      <input type="date" id="expDate" required />
+
+      <input type="number" id="cost" placeholder="Costo por Dia" required />
+
+      <button type="submit" id="btnSubmit"></button>
+      <button type="button" id="btnCancel">Cancelar</button>
+    </form>
+
+    <h2>Anuncios Publicitarios</h2>
+    <table id="PublishTable">
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Descripcion</th>
+          <th>Fecha de Inicio</th>
+          <th>Fecha de Fin</th>
+          <th>Dias Publicados</th>
+          <th>Costos</th>
+          <th>Costo Total</th>
+          <th>Activo/desactivo</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+
+      <tbody id="listaAnuncios"></tbody>
+    </table>
+
+    <script src="js/localStorage.js"></script>
+    <script src="js/index.js"></script>
+  </body>
+</html>
